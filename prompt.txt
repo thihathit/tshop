@@ -1,0 +1,23 @@
+Build a REST API nodejs server for T-shirt. Only give me the codes. No explanation required.
+
+The server should have the following endpoints for users to interact with the server.:
+- /product/list?name=&color=&size=&price=
+- /product/:id
+- /cart/add
+- /cart/remove
+- /cart/update
+- /cart/list
+- /cart/checkout
+Server Setup:
+- Endpoint spec must be exported to OpenAPI 3.0 format.(serve at /api-spec.yaml)
+- Choose api endpoint input validator or a nodejs framework that plays well with OpenAPI export mechanism.
+- /api-spec.yaml must have a global desciption of what this serprver does and what features it supports in natural language.
+- There must be Swagger UI to visualize and interact with the API. (serve at /api-docs)
+- Consider honojs / fastify frameworks if applicable, if not go with whatever u see fit.
+- Use a in-memory data store to store the data.
+- Use mock data to populate the data store upon server start. Use mock generation library for this. Must have at least 100 products.
+Feature Note:
+- product's stock must reflect the cart's state.
+- product & cart list need to support offset-based pagination.
+- Make sure the cart state is global and shared among all users.
+- /api-spec.yaml should be generated based on the endpoint's configurations not the other way around
